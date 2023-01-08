@@ -1,0 +1,48 @@
+* {
+    font-family: monospace;
+}
+
+div.header {
+    background-color: #c4c4c4;
+    width: 100;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+div.note {
+    width: 35%;
+    margin: 10px auto;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #e8e8e8;
+}
+div.note:hover {
+    background-color: #d4d4d4;
+}
+
+div.note button {
+    float: right;
+    margin-left: 5px;
+}
+
+div.add-note-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin: 20px;
+}
+
+div.add-note-div input {
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+div.add-note-div button {
+    width: 60px;
+    height: 46px;
+    padding: 6px;
+    border-radius: 5px;
+}

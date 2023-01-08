@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com./ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>待辦事項</title>
+</head>
+<body>
+    <div class="header">
+        <span style="font-size: 24px;">To Do List 待辦事項清單</span>
+        <br><br>
+        <span style="font-size: 16px;">待辦事項：<b id="note_count">{{ note_count }}</b>項</span>
+    </div>
+
+    <div class="add-note-div">
+        <div>
+            <input type="text" name="content" id="content" maxlength="50" size="50">
+            <button class="add-note">新增</button>
+        </div>
+    </div>
+
+    <div class="note-container">
+    {% for n in note %}
+    <div class="note">
+        <p id="note_box">
+            <span><input type="checkbox" class="checkbox"></span>
+            <span id="note_id" hidden>{{ n.id }}</span>
+            <span id="note_content" style="text-decoration: none;">{{ n.content }}</span>
+            <span><button class="edit-note">修改</button></span>
+            <span><button class="delete-note">刪除</button></span>
+        </p>
+
+        <p id="edit_note_box" hidden>
+            <span><input type="text" id="edited_note_content" name="edited_note_content" size="50"></span>
+            <span><button class="edit-note-cancel">取消</button></span>
+            <span><button class="edit-note-confirm">確定</button></span>
+        </p>
+    </div>
+    {% endfor %}
+    </div>
+
+    <script src="{{ url_for('static', filename='main.js') }}"></script>
+</body>
+</html>
