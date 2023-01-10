@@ -99,9 +99,9 @@ $(document).ready(function () {
                     var prepend_string = `
                     <div class="note">
                         <p id="note_box">
-                            <span><input type="checkbox"></span>
+                            <span><input type="checkbox" class="checkbox"></span>
                             <span id="note_id" hidden>${response.note_id}</span>
-                            <span id="note_content">${newNoteContent}</span>
+                            <span id="note_content" style="text-decoration: none;">${newNoteContent}</span>
                             <span><button class="edit-note">修改</button></span>
                             <span><button class="delete-note">刪除</button></span>
                         </p>
